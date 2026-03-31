@@ -1,0 +1,23 @@
+{
+  "name": "solbot",
+  "version": "1.0.0",
+  "description": "Solana trading bot monitoring HYPE token price and executing Jupiter swaps",
+  "type": "module",
+  "main": "dist/bot.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --loader ts-node/esm src/bot.ts",
+    "start:compiled": "npm run build && node dist/bot.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
